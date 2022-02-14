@@ -4,4 +4,7 @@ services:
     image: manimcommunity/manim
     ports:
       - 8888:8888
-    command: jupyter lab --ip=0.0.0.0
+    command: jupyter lab --ip=0.0.0.0 --allow-root
+    user: root
+    volumes:
+      - "./notebooks:/manim"
